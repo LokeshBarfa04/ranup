@@ -132,7 +132,7 @@ export default function Navbar() {
               onClick={() => scrollTo("#contact")}
               className="px-5 py-2.5 bg-leaf-700 hover:bg-leaf-600 text-white text-sm font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-leaf-200 hover:-translate-y-0.5"
             >
-              Get in Touch
+              contact us 
             </button>
           </div>
 
@@ -193,7 +193,7 @@ export default function Navbar() {
                   onClick={() => scrollTo("#contact")}
                   className="w-full mt-2 px-4 py-3 bg-leaf-700 text-white text-sm font-medium rounded-xl text-center"
                 >
-                  Get in Touch
+                  contact us 
                 </button>
               </motion.li>
             </ul>

@@ -136,7 +136,7 @@ export default function ContactSection() {
         >
           <div className="divider-leaf mb-6 max-w-xs mx-auto">
             <span className="text-leaf-500 text-xs tracking-widest uppercase font-medium px-4">
-              Get In Touch
+              contact us
             </span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-leaf-900 mb-4">
@@ -158,11 +158,10 @@ export default function ContactSection() {
           >
             <div className="p-7 bg-gradient-to-br from-leaf-800 to-leaf-900 rounded-3xl text-white">
               <h3 className="font-display text-2xl font-bold mb-2">
-                AgroSeeds
+                Ranup Crop Care
               </h3>
               <p className="text-leaf-300/80 text-sm leading-relaxed mb-8">
-                Trusted by farmers across Chhattisgarh, Madhya Pradesh, and
-                Odisha for premium certified seeds since 1994.
+                Trusted by farmers across India and international markets for high-quality agricultural solutions since 2024.
               </p>
 
               <div className="space-y-5">
@@ -202,7 +201,7 @@ export default function ContactSection() {
                       </svg>
                     ),
                     label: "Business Hours",
-                    value: "Mon–Sat, 9 AM – 9 PM",
+                    value: "Mon–Sun, 9 AM – 9 PM",
                   },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4">

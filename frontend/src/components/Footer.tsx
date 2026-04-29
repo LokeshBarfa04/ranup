@@ -20,18 +20,18 @@ export default function Footer() {
                   <path d="M12 2C7 2 3 8 3 14c0 4 2.5 7 6 7.5V18c0-3 1.5-5 3-6.5C13.5 13 15 15 15 18v3.5c3.5-.5 6-3.5 6-7.5 0-6-4-12-9-12z" fill="#c8e6a0" />
                 </svg>
               </div>
-              <span className="font-display font-bold text-xl">AgroSeeds</span>
+              <span className="font-display font-bold text-xl">Ranup crop care </span>
             </div>
             <p className="text-leaf-300/70 text-sm leading-relaxed max-w-sm">
-              Premium certified seeds and agronomic solutions for India&apos;s
-              farming communities. Serving with integrity since 1994.
+              Committed to farmer success, Ranup Crop Care Pvt. Ltd. delivers high-quality seeds, fertilizers, and pesticides 
+              through continuous innovation, serving both India and international markets.
             </p>
             <div className="mt-6 flex items-center gap-1 text-xs text-leaf-400">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              Durg, Chhattisgarh — 491001, India
+              C/. Naranbhai Shankerbha, Patel, NR. Sahjanand SOC , Aslali, Ahmedabad, Daskroi, Gujarat ,382427
             </div>
           </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
               Navigate
             </h4>
             <ul className="space-y-2.5">
-              {["Home", "Seeds", "About", "Why Us", "Contact"].map((link) => (
+              {["Home", "Product", "About", "Why Us", "Contact"].map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => {
@@ -64,21 +64,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-leaf-300/70">
               <li>
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href="tel:+917587525025" className="hover:text-white transition-colors">
+                  +91 7587525025 
                 </a>
               </li>
               <li>
-                <a href="mailto:info@agroseeds.in" className="hover:text-white transition-colors">
-                  info@agroseeds.in
+                <a href="mailto:info.ranupcrop@gmail.com" className="hover:text-white transition-colors">
+                  info.ranupcrop@gmail.com
                 </a>
               </li>
-              <li className="text-leaf-400/60">Mon–Sat, 9 AM – 6 PM IST</li>
+              <li className="text-leaf-400/60">Mon–Sat, 9 AM – 9 PM IST</li>
             </ul>
 
             <div className="mt-6">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917587525025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/30 rounded-xl text-[#4ADE80] text-sm font-medium transition-colors"
@@ -93,8 +93,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-leaf-700/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-leaf-400/60">
-          <p>© {year} AgroSeeds. All rights reserved.</p>
-          <p>Designed with 🌱 in Chhattisgarh, India</p>
+          <p>© {2024} Ranupcropcare. All rights reserved.</p>
+          <p>Designed with 🌱 in Gujarat, India</p>
         </div>
       </div>
     </footer>
