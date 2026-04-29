@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary palette */
+  --color-soil-dark: #1a0f08;
+  --color-soil: #4d2e12;
+  --color-soil-mid: #8a5420;
+  --color-soil-light: #e8c99a;
+
+  --color-leaf-dark: #1f3314;
+  --color-leaf: #2d4a1e;
+  --color-leaf-mid: #4d7d1a;
+  --color-leaf-light: #b4d985;
+  --color-leaf-pale: #f0f7e8;
+
+  --color-seed: #f5cf52;
+  --color-seed-dark: #c8950e;
+
+  --color-cream: #fdf7ef;
+  --color-parchment: #f5e8d3;
+
+  /* Grain texture overlay */
+  --grain-opacity: 0.04;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-soil-dark);
+  overflow-x: hidden;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-leaf);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-leaf-mid);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-seed);
+  color: var(--color-leaf-dark);
+}
+
+/* Utility classes */
+.text-gradient-leaf {
+  background: linear-gradient(135deg, #4d7d1a 0%, #8abb4a 50%, #4d7d1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #c8950e 0%, #f5cf52 50%, #c8950e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-mesh {
+  background:
+    radial-gradient(at 40% 20%, hsla(120, 60%, 20%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(40, 70%, 60%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(100, 50%, 30%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(40, 60%, 50%, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(120, 40%, 25%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(40, 50%, 70%, 0.1) 0px, transparent 50%);
+}
+
+/* Form focus styles */
+.form-input {
+  @apply w-full bg-white/60 backdrop-blur-sm border border-leaf-200 rounded-xl px-5 py-3.5 text-soil-800 placeholder-soil-400 font-body text-sm transition-all duration-300 outline-none;
+}
+.form-input:focus {
+  @apply border-leaf-400 bg-white/90 shadow-lg shadow-leaf-100;
+  box-shadow: 0 0 0 3px rgba(77, 125, 26, 0.1), 0 4px 16px rgba(77, 125, 26, 0.08);
+}
+
+/* Section reveal animation */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative divider */
+.divider-leaf {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.divider-leaf::before,
+.divider-leaf::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(77, 125, 26, 0.3), transparent);
+}
